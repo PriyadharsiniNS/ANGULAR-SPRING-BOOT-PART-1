@@ -1,0 +1,18 @@
+<div class="container">
+    <form (ngSubmit)="getAdmissionDetails(aid, aname)">
+<table>
+    <tr>
+        <td>Admission ID</td>
+        <td><input type="number" name="aid" [(ngModel)]="aid"></td>
+        </tr>
+        <tr>
+        <td>Admission Name</td>
+        <td><input type="text" name = "aname" [(ngModel)]="aname"></td>
+        </tr>
+    <tr><td><button type="submit">
+        Submit
+    </button></td></tr>
+</table>
+</form>
+</div>
+

@@ -1,0 +1,17 @@
+<div class="container">
+    <form (ngSubmit)="editInsDetails(iid, iname)">
+<table>
+    <tr>
+        <td>Institute ID</td>
+        <td><input type="number" name="iid" [(ngModel)]="iid"></td>
+        </tr>
+        <tr>
+        <td>Institute Name</td>
+        <td><input type="text" name = "iname" [(ngModel)]="iname"></td>
+        </tr>
+    <tr><td><button type="submit">
+        Submit
+    </button></td></tr>
+</table>
+</form>
+</div>

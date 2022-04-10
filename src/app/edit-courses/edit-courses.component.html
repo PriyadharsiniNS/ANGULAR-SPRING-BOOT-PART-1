@@ -1,0 +1,17 @@
+<div class="container">
+    <form (ngSubmit)="editCourseDetails(cid, cname)">
+<table>
+    <tr>
+        <td>Course ID</td>
+        <td><input type="number" name="cid" [(ngModel)]="cid"></td>
+        </tr>
+        <tr>
+        <td>Course Name</td>
+        <td><input type="text" name = "cname" [(ngModel)]="cname"></td>
+        </tr>
+    <tr><td><button type="submit">
+        Submit
+    </button></td></tr>
+</table>
+</form>
+</div>

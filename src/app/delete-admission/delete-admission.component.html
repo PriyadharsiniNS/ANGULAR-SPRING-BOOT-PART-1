@@ -1,0 +1,13 @@
+<div class="container">
+    <form (ngSubmit)="deleteAdmissionDetails(aid)">
+<table>
+    <tr>
+        <td>Admission ID</td>
+        <td><input type="number" name="aid" [(ngModel)]="aid"></td>
+        </tr>
+    <tr><td><button type="submit">
+        Submit
+    </button></td></tr>
+</table>
+</form>
+</div>

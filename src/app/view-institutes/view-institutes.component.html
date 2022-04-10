@@ -1,0 +1,12 @@
+<div class="container" style="font-size:15px;">
+    <table border="3px solid black">
+        <tr>
+            <td>Institute ID</td>
+            <td>Institute Name</td>
+        </tr>
+        <tr *ngFor="let i of institute">
+            <td>{{i.iid}}</td>
+            <td>{{i.iname}}</td>
+        </tr>
+    </table>
+</div>

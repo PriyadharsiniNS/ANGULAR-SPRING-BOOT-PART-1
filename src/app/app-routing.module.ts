@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ChildrenOutletContexts, RouterModule, Routes } from '@angular/router';
 import { AddAdmissionComponent } from './add-admission/add-admission.component';
 import { AddCoursesComponent } from './add-courses/add-courses.component';
 import { AddInstitutesComponent } from './add-institutes/add-institutes.component';
@@ -16,25 +16,35 @@ import { ViewAdmissionComponent } from './view-admission/view-admission.componen
 import { ViewCoursesComponent } from './view-courses/view-courses.component';
 import { ViewInstitutesComponent } from './view-institutes/view-institutes.component';
 import { ViewStudentsComponent } from './view-students/view-students.component';
-
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  {'path' : 'View Courses', component : ViewCoursesComponent},
-  {'path' : 'Add Courses' , component : AddCoursesComponent},
-  {'path' : 'Edit Courses' , component : EditCoursesComponent},
-  {'path' : 'Delete Courses' , component : DeleteCoursesComponent},
-  {'path' : 'View Institutes', component : ViewInstitutesComponent},
-  {'path' : 'Add Institutes', component : AddInstitutesComponent},
-  {'path' : 'Edit Institutes', component : EditInstitutesComponent},
-  {'path' : 'Delete Institutes', component : DeleteInstitutesComponent},
-  {'path' : 'View Students' , component : ViewStudentsComponent},
-  {'path' : 'Add Students', component : AddStudentsComponent},
-  {'path' : 'Edit Students', component : EditStudentsComponent},
-  {'path' : 'Delete Students', component : DeleteStudentsComponent},
-  {'path' : 'View Admissions' , component : ViewAdmissionComponent},
-  {'path' : 'Add Admissions' , component : AddAdmissionComponent},
-  {'path' : 'Edit Admissions' , component : EditAdmissionComponent},
-  {'path' : 'Delete Admissions' , component : DeleteAdmissionComponent}
+  {'path': '', component: LoginComponent },
+  {'path': 'signup', component: SignUpComponent },
+  {'path' : 'admin' , component : AdminComponent, children:[
+    {'path' : 'View Courses', component : ViewCoursesComponent},
+    {'path' : 'Add Courses' , component : AddCoursesComponent},
+    {'path' : 'Edit Courses' , component : EditCoursesComponent},
+    {'path' : 'Delete Courses' , component : DeleteCoursesComponent},
+    {'path' : 'View Institutes', component : ViewInstitutesComponent},
+    {'path' : 'Add Institutes', component : AddInstitutesComponent},
+    {'path' : 'Edit Institutes', component : EditInstitutesComponent},
+    {'path' : 'Delete Institutes', component : DeleteInstitutesComponent},
+    {'path' : 'View Students' , component : ViewStudentsComponent},
+    {'path' : 'Add Students', component : AddStudentsComponent},
+    {'path' : 'Edit Students', component : EditStudentsComponent},
+    {'path' : 'Delete Students', component : DeleteStudentsComponent},
+  ]},
+  {'path' : 'user', component : UserComponent , children:[
+    {'path' : 'View Admissions' , component : ViewAdmissionComponent},
+    {'path' : 'Add Admissions' , component : AddAdmissionComponent},
+    {'path' : 'Edit Admissions' , component : EditAdmissionComponent},
+    {'path' : 'Delete Admissions' , component : DeleteAdmissionComponent}
+  ]}
+ 
 ];
 
 @NgModule({

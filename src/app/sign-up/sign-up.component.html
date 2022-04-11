@@ -1,0 +1,33 @@
+<form action="" (ngSubmit)="signupSubmit()">
+    <table>
+        <tr>
+            <td>email:</td>
+            <td><input type="email" name="email" id="email" [(ngModel)]="user.email" required /></td>
+        </tr>
+        <tr>
+            <td>username:</td>
+            <td><input type="text" name="username" id="username" [(ngModel)]="user.username" required /></td>
+        </tr>
+        <tr>
+            <td>mobileNumber:</td>
+            <td><input type="text" name="mobileNumber" id="mobileNumber" [(ngModel)]="user.mobileNumber" required />
+            </td>
+        </tr>
+        <tr>
+            <td>password:</td>
+            <td><input type=" text" name="password" id="password" [(ngModel)]="user.password" /></td>
+        </tr>
+        <tr>
+            <td>confirm password:</td>
+            <td><input type="text" name="confirmPassword" id="confirmPassword" [(ngModel)]="user.confirmPassword"
+                    required />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="submitButton" type="submit">signup</button></td>
+        </tr>
+    </table>
+</form>
+<div [ngClass]="{'show':showError}">
+    Invalid Credentials
+</div>

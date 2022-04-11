@@ -1,0 +1,19 @@
+<form action="" (ngSubmit)="loginSubmit()">
+    <table>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email" id="email" [(ngModel)]="user.email" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" name="password" id="password" [(ngModel)]="user.password" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="loginButton" type="submit">login</button></td>
+        </tr>
+    </table>
+</form>
+<a id="signupLink" routerLink="signup">SignUp</a>
+<div [ngClass]="{'show':showError}">
+    Invalid Credentials
+</div>

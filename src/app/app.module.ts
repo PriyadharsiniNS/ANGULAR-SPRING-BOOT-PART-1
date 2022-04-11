@@ -22,6 +22,11 @@ import { ViewAdmissionComponent } from './view-admission/view-admission.componen
 import { AddAdmissionComponent } from './add-admission/add-admission.component';
 import { EditAdmissionComponent } from './edit-admission/edit-admission.component';
 import { DeleteAdmissionComponent } from './delete-admission/delete-admission.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +46,11 @@ import { DeleteAdmissionComponent } from './delete-admission/delete-admission.co
     ViewAdmissionComponent,
     AddAdmissionComponent,
     EditAdmissionComponent,
-    DeleteAdmissionComponent
+    DeleteAdmissionComponent,
+    LoginComponent,
+    SignUpComponent,
+    AdminComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

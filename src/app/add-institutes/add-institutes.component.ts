@@ -11,22 +11,36 @@ export class AddInstitutesComponent implements OnInit {
 
   service: MainServiceService;
   i : Institute;
-  iid : number = 0;
-  iname : string = '';
+  instituteId : number = 0;
+  instituteName : string = '';
+  instituteDescription : string = '';
+  instituteAddress : string = '';
+  mobile : string = '';
+  email : string = '';
   constructor(service : MainServiceService) {
     this.service = service;
-    this.i = new Institute(this.iid, this.iname);
+    this.i = new Institute(this.instituteId,this.instituteName,
+      this.instituteDescription, this.instituteAddress,
+      this.mobile, this.email);
    }
 
 
   ngOnInit(): void {
   }
 
-  getInsDetails(iid:number, iname:string)
+  getInsDetails(instituteId : number,instituteName : string,
+    instituteDescription : string,instituteAddress : string,
+    mobile : string,email : string)
   {
-    this.iid = iid;
-    this.iname = iname;
-    this.i = new Institute(iid, iname);
-    this.service.addIns(this.i).subscribe();
+        this.instituteId = instituteId;
+        this.instituteName = instituteName;
+        this.instituteDescription = instituteDescription;
+        this.instituteAddress = instituteAddress;
+        this.mobile = mobile;
+        this.email = email;
+        this.i = new Institute(this.instituteId,this.instituteName,
+        this.instituteDescription, this.instituteAddress,
+        this.mobile, this.email);
+        this.service.addIns(this.i).subscribe();
   }
 }

@@ -8,7 +8,7 @@ import { MainServiceService } from '../main-service.service';
 })
 export class DeleteInstitutesComponent implements OnInit {
 
-  iid:number=0;
+  instituteId:number=0;
   service:MainServiceService;
   constructor(service:MainServiceService) {
     this.service = service;
@@ -17,9 +17,9 @@ export class DeleteInstitutesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteInsDetails(iid:number)
+  deleteInsDetails(instituteId:number)
   {
-    this.iid = iid;
-    this.service.deleteIns(this.iid).subscribe();
+    this.instituteId = instituteId;
+    this.service.deleteIns(this.instituteId).subscribe();
   }
 }

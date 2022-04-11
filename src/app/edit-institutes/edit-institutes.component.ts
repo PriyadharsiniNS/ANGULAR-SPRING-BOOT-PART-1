@@ -10,22 +10,36 @@ import { MainServiceService } from '../main-service.service';
 export class EditInstitutesComponent implements OnInit {
 
   service : MainServiceService;
-  iid : number = 0;
-  iname : string = '';
+  instituteId : number = 0;
+  instituteName : string = '';
+  instituteDescription : string = '';
+  instituteAddress : string = '';
+  mobile : string = '';
+  email : string = '';
   i : Institute;
   constructor(service : MainServiceService) { 
     this.service = service;
-    this.i = new Institute(this.iid,this.iname);
+    this.i = new Institute(this.instituteId,this.instituteName,
+                          this.instituteDescription, this.instituteAddress,
+                          this.mobile, this.email);
   }
 
   ngOnInit(): void {
   }
 
-  editInsDetails(iid:number, iname:string)
+  editInsDetails(instituteId : number,instituteName : string,
+                instituteDescription : string,instituteAddress : string,
+                mobile : string,email : string)
   {
-    this.iid = iid;
-    this.iname = iname;
-    this.i = new Institute(iid,iname);
+    this.instituteId = instituteId;
+		this.instituteName = instituteName;
+		this.instituteDescription = instituteDescription;
+		this.instituteAddress = instituteAddress;
+		this.mobile = mobile;
+		this.email = email;
+    this.i = new Institute(this.instituteId,this.instituteName,
+      this.instituteDescription, this.instituteAddress,
+      this.mobile, this.email);
     this.service.editIns(this.i).subscribe();
   }
 

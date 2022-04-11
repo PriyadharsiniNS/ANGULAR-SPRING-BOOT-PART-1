@@ -3,10 +3,18 @@
         <tr>
             <td>Institute ID</td>
             <td>Institute Name</td>
+            <td>Institute Description</td>
+            <td>Institute Address</td>
+            <td>Mobile</td>
+            <td>Email</td>
         </tr>
         <tr *ngFor="let i of institute">
-            <td>{{i.iid}}</td>
-            <td>{{i.iname}}</td>
+            <td>{{i. instituteId}}</td>
+            <td>{{i.instituteName}}</td>
+            <td>{{i. instituteDescription}}</td>
+            <td>{{i.instituteAddress}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.email}}</td>
         </tr>
     </table>
 </div>
